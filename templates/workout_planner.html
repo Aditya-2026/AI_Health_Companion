@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Planner</title>
+</head>
+<body>
+    <h1>Workout Planner</h1>
+    <form method="POST">
+        <label for="time">Time (minutes):</label>
+        <input type="text" id="time" name="time" required><br>
+        <label for="equipment">Equipment:</label>
+        <input type="text" id="equipment" name="equipment" required><br>
+        <label for="muscle">Muscle:</label>
+        <input type="text" id="muscle" name="muscle" required><br>
+        <label for="fitness_level">Fitness Level:</label>
+        <input type="text" id="fitness_level" name="fitness_level" required><br>
+        <label for="fitness_goals">Fitness Goals:</label>
+        <input type="text" id="fitness_goals" name="fitness_goals" required><br>
+        <button type="submit">Fetch Workout Plan</button>
+    </form>
+
+    {% if workout_plan %}
+        <h2>Workout Plan Results:</h2>
+        <ul>
+            {% for workout in workout_plan %}
+                <li>{{ workout }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>

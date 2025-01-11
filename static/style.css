@@ -1,0 +1,97 @@
+/* style.css */
+
+/* General Body Styling */
+body {
+    background-image: url('background.jpg'); /* Path to your image */
+    background-size: cover; /* Adjusts the image to cover the entire screen */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents image repetition */
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    /* background-color: #f4f4f4; */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    /* background-color: #4CAF50; */
+    color: black(203, 18, 18);
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Section Styling */
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: rgb(50, 122, 177);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #333;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    /* background-color: #4CAF50; */
+    color: black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Form Styling */
+form {
+    margin-top: 20px;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #141111;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Tracker App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Your Health Tracker</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('recommendations') }}">Health Recommendations</a></li>
+                <li><a href="{{ url_for('mood_tracking') }}">Mood Tracking</a></li>
+                <li><a href="{{ url_for('mindfulness') }}">Mindfulness</a></li>
+                <li><a href="{{ url_for('exercises') }}">Find Exercises</a></li>
+                <li><a href="{{ url_for('workout_planner') }}">Workout Planner</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Track Your Health and Well-being</h2>
+        <p>Stay on top of your wellness with personalized recommendations, mood tracking, and mindfulness exercises.</p>
+        <p>New features:</p>
+        <ul>
+            <li><a href="{{ url_for('exercises') }}">Find Exercises</a></li>
+            <li><a href="{{ url_for('workout_planner') }}">Get a Workout Plan</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Health Tracker App</p>
+    </footer>
+</body>
+</html>

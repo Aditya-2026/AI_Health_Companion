@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindfulness Exercises</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Mindfulness Exercises</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('recommendations') }}">Health Recommendations</a></li>
+                <li><a href="{{ url_for('mood_tracking') }}">Mood Tracking</a></li>
+                <li><a href="{{ url_for('mindfulness') }}">Mindfulness</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Practice Mindfulness</h2>
+        <p>Explore exercises to improve mental clarity and reduce stress.</p>
+        <ul>
+            <li><strong>Breathing Exercise:</strong> Focus on your breathing for 5 minutes, inhale for 4 seconds, hold for 4 seconds, exhale for 4 seconds.</li>
+            <li><strong>Body Scan:</strong> Sit comfortably and scan each part of your body, relaxing each muscle group from head to toe.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Health Tracker App</p>
+    </footer>
+</body>
+</html>

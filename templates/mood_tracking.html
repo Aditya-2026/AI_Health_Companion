@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Tracking</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Mood Tracking</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('recommendations') }}">Health Recommendations</a></li>
+                <li><a href="{{ url_for('mood_tracking') }}">Mood Tracking</a></li>
+                <li><a href="{{ url_for('mindfulness') }}">Mindfulness</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Log Your Daily Mood</h2>
+        <form method="POST">
+            <label for="mood">How are you feeling today?</label>
+            <select name="mood" id="mood">
+                <option value="happy">Happy</option>
+                <option value="neutral">Neutral</option>
+                <option value="sad">Sad</option>
+                <option value="angry">Angry</option>
+                <option value="stressed">Stressed</option>
+            </select>
+            <br>
+            <label for="notes">Additional Notes:</label>
+            <textarea name="notes" id="notes" placeholder="Any additional comments or reflections"></textarea>
+            <br>
+            <button type="submit">Submit Mood</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Health Tracker App</p>
+    </footer>
+</body>
+</html>

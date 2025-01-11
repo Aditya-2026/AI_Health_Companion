@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diet Plan</title>
+</head>
+<body>
+    <h2>Diet Plan</h2>
+    <form method="POST">
+        <label for="age">Age: </label><input type="text" id="age" name="age"><br>
+        <label for="gender">Gender: </label><input type="text" id="gender" name="gender"><br>
+        <label for="weight">Weight: </label><input type="text" id="weight" name="weight"><br>
+        <label for="height">Height: </label><input type="text" id="height" name="height"><br>
+        <label for="activity_level">Activity Level: </label><input type="text" id="activity_level" name="activity_level"><br>
+        <label for="dietary_preference">Dietary Preference: </label><input type="text" id="dietary_preference" name="dietary_preference"><br>
+        <label for="allergies">Allergies: </label><input type="text" id="allergies" name="allergies"><br>
+        <label for="health_goals">Health Goals: </label><input type="text" id="health_goals" name="health_goals"><br>
+        <input type="submit" value="Submit">
+    </form>
+    {% if calories %}
+        <h3>Calories Needed: {{ calories }}</h3>
+    {% endif %}
+</body>
+</html>

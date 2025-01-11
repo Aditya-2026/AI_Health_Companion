@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise and Workout Planner</title>
+</head>
+<body>
+    <h2>Exercise Plan</h2>
+    <form method="POST" action="{{ url_for('exercises') }}">
+        <label for="body_part">Body Part: </label>
+        <input type="text" id="body_part" name="body_part" placeholder="e.g., back"><br>
+        
+        <label for="muscle_target">Muscle Target: </label>
+        <input type="text" id="muscle_target" name="muscle_target" placeholder="e.g., abductors"><br>
+        
+        <label for="equipment">Equipment Used: </label>
+        <input type="text" id="equipment" name="equipment" placeholder="e.g., assisted"><br>
+        
+        <input type="submit" value="Find Exercises">
+    </form>
+
+    {% if exercises %}
+        <h3>Suggested Exercises:</h3>
+        <ul>
+            {% for exercise in exercises %}
+                <li>{{ exercise }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <h2>Workout Planner</h2>
+    <form method="POST" action="{{ url_for('workout_planner') }}">
+        <label for="time">Available Time (minutes): </label>
+        <input type="text" id="time" name="time" placeholder="e.g., 30"><br>
+
+        <label for="equipment_wp">Equipment: </label>
+        <input type="text" id="equipment_wp" name="equipment" placeholder="e.g., dumbbells"><br>
+
+        <label for="muscle">Muscle Group: </label>
+        <input type="text" id="muscle" name="muscle" placeholder="e.g., biceps"><br>
+
+        <label for="fitness_level">Fitness Level: </label>
+        <input type="text" id="fitness_level" name="fitness_level" placeholder="e.g., beginner"><br>
+
+        <label for="fitness_goals">Fitness Goals: </label>
+        <input type="text" id="fitness_goals" name="fitness_goals" placeholder="e.g., strength"><br>
+
+        <input type="submit" value="Get Workout Plan">
+    </form>
+
+    {% if workout_plan %}
+        <h3>Your Workout Plan:</h3>
+        <ul>
+            {% for workout in workout_plan %}
+                <li>{{ workout }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
