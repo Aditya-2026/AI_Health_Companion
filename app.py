@@ -73,8 +73,8 @@ def fetch_workout_plan(time, equipment, muscle, fitness_level, fitness_goals):
     querystring = {"time":"30","equipment":"dumbbells","muscle":"biceps","fitness_level":"beginner","fitness_goals":"strength"}
 
     headers = {
-        "x-rapidapi-key": "aa81da170cmshe3df47affbbbe25p1a598bjsnfa1bbc9bc8ec",
-        "x-rapidapi-host": "workout-planner1.p.rapidapi.com"
+        "x-rapidapi-key": "API_KEY",
+        "x-rapidapi-host": "API_HOST"
     }
 
     response = requests.get(url, headers=headers, params=querystring)
